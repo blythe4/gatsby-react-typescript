@@ -1,11 +1,13 @@
+const path = require('path')
+
 exports.createPages = async ({ actions }) => {
-  const { createPage } = actions
-  createPage({
-    path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.js"),
-    context: {},
-    defer: true,
-  })
+    const { createPage } = actions
+    createPage({
+        path: '/using-dsg',
+        component: path.resolve('./src/pages/index.tsx'),
+        context: {},
+        defer: true,
+    })
 }
 
 /**
@@ -16,20 +18,18 @@ exports.createPages = async ({ actions }) => {
 
 // You can delete this file if you're not using it
 
-const path = require("path")
-
 // Setup Import Alias
 exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
-  const output = getConfig().output || {}
+    const output = getConfig().output || {}
 
-  actions.setWebpackConfig({
-    output,
-    resolve: {
-      alias: {
-        components: path.resolve(__dirname, "src/components"),
-        utils: path.resolve(__dirname, "src/utils"),
-        hooks: path.resolve(__dirname, "src/hooks"),
-      },
-    },
-  })
+    actions.setWebpackConfig({
+        output,
+        resolve: {
+            alias: {
+                components: path.resolve(__dirname, 'src/components'),
+                utils: path.resolve(__dirname, 'src/utils'),
+                hooks: path.resolve(__dirname, 'src/hooks'),
+            },
+        },
+    })
 }
