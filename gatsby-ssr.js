@@ -12,7 +12,7 @@ const HeadComponents = [
     <link
         key="lobster"
         rel="preload"
-        href="/fonts/NotoSansKR-Regular.woff2"
+        href="/fonts/SpoqaHanSansNeo-Regular.woff2"
         as="font"
         type="font/woff2"
         crossOrigin="anonymous"
@@ -20,7 +20,7 @@ const HeadComponents = [
     <link
         key="inter-regular"
         rel="preload"
-        href="/fonts/NotoSansKR-Medium.woff2"
+        href="/fonts/SpoqaHanSansNeo-Medium.woff2"
         as="font"
         type="font/woff2"
         crossOrigin="anonymous"
@@ -28,7 +28,7 @@ const HeadComponents = [
     <link
         key="inter-bold"
         rel="preload"
-        href="/fonts/NotoSansKR-Bold.woff2"
+        href="/fonts/SpoqaHanSansNeo-Bold.woff2"
         as="font"
         type="font/woff2"
         crossOrigin="anonymous"
