@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+:root {
+    --main-color: #053784;
+
+    --primary-color-200: #2563eb;
+    --primary-color-150: #dbeafe;
+    --primary-color-100: #cbd8f3;
+    --primary-color-50: #cbd5e1;
+
+    --black-color-600: #000;
+    --black-color-500: #1a1a1a;
+    --black-color-400: #8c8c8c;
+    --black-color-300: #adadad;
+    --black-color-200: #bfbfbf;
+    --black-color-100: #d9d9d9;
+    --black-color-50: #f2f2f2;
+
+    --error-color-200: #dc2626;
+    --error-color-100: #f87171;
+
+    --font-color: #000;
+    --border-color: #ddd;
+    --bg-color: #f7f7f7;
+
+    --white-color: #fff;
+
+    --noimg-bg-color: #e1eaf1;
+
+    --main-border: 1px solid var(--border-color);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'NotoSans', serif;
+}
+
+html,
+body,
+#___gatsby {
+    height: 100%;
+}
+
+a,
+a:hover {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
