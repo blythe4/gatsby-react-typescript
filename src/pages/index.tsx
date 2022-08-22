@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useMemo } from 'react'
+import React, { FunctionComponent, useEffect, useMemo } from 'react'
 import styled from '@emotion/styled'
 import Footer from 'components/Common/Footer'
 import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
@@ -9,6 +9,7 @@ import { PostListItemType } from '../types/PostItem.types'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import queryString, { ParsedQuery } from 'query-string'
 import Layout from 'components/Layout/layout'
+import { SEO } from 'components/Layout/seo'
 
 type IndexPageProps = {
     location: {
@@ -41,6 +42,9 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
         },
     },
 }) {
+    useEffect(() => {
+        console.log(`${process.env.API_KEY}`)
+    }, [])
     const parsed: ParsedQuery<string> = queryString.parse(search)
     const selectedCategory: string =
         typeof parsed.category !== 'string' || !parsed.category
@@ -87,6 +91,8 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
 }
 
 export default IndexPage
+
+export const Head = () => <SEO />
 
 export const getPostList = graphql`
     query getPostList {

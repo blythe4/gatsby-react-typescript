@@ -2,6 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 import { Global, css } from '@emotion/react'
 import styled from '@emotion/styled'
+import { SEO } from 'components/Layout/seo'
 
 type InfoPageProps = {
     data: {
@@ -62,6 +63,8 @@ const InfoPage: FunctionComponent<InfoPageProps> = function ({
 }
 
 export default InfoPage
+
+export const Head = () => <SEO title="info" />
 
 export const metadataQuery = graphql`
     {
